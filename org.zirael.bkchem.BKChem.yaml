@@ -80,13 +80,11 @@ modules:
       - type: archive
         url: https://bkchem.zirael.org/download/bkchem-0.13.0.tar.gz
         sha256: ac78f9bb6fa5c62ec7a2281c9ef4a6a9b5180b51cb4e9353963ce772c1869238
-      - type: patch
-        path: icons.patch
-        use-git: true
-      # the above patch is simply ignored by flatpak-builder so repeat its contents
       - type: file
         path: bkchem128.png
       - type: file
         path: bkchem256.png
-      - type: patch
-        path: appstream.patch
+      - type: file
+        path: org.zirael.bkchem.BKChem.desktop
+      - type: file
+        path: org.zirael.bkchem.BKChem.metainfo.xml
